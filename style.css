@@ -343,7 +343,7 @@ footer {
         font-size: 34px;
     }
    }
-/* =========================
+    /* =========================
    ÉVÉNEMENTS
 ========================= */
 
@@ -359,7 +359,7 @@ footer {
 }
 
 .events-description {
-    color: #777;
+    color: #777777;
     margin-bottom: 35px;
 }
 
@@ -377,12 +377,6 @@ footer {
     border: 1px solid #eeeeee;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.2s ease;
-}
-
-.event-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .event-card h3 {
@@ -394,23 +388,11 @@ footer {
     border: none;
     padding: 11px 20px;
     border-radius: 25px;
-    background: #222;
-    color: #fff;
+    background: #222222;
+    color: #ffffff;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.15s ease;
 }
-
-.event-card button:hover {
-    transform: translateY(-2px);
-}
-
-.event-card button:active {
-    transform: scale(0.94);
-}
-
-
-/* Téléphone */
 
 @media (max-width: 700px) {
 
@@ -425,4 +407,4 @@ footer {
     #events-list {
         grid-template-columns: 1fr;
     }
-   }
+}

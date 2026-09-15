@@ -10,34 +10,14 @@ const API_URL =
 // VOIR LES ÉVÉNEMENTS
 // =========================
 
-async function voirEvenements() {
+function voirEvenements() {
+    const section = document.getElementById("events-section");
 
-    try {
-
-        const response = await fetch(API_URL);
-
-        if (!response.ok) {
-            throw new Error("Erreur lors de la connexion à l'API.");
-        }
-
-        const data = await response.json();
-
-        if (!data.success) {
-            throw new Error("L'API a retourné une erreur.");
-        }
-
-        afficherEvenements(data.events);
-
-    } catch (error) {
-
-        console.error(error);
-
-        alert(
-            "Impossible de charger les événements pour le moment."
-        );
-
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
     }
-
 }
 
 

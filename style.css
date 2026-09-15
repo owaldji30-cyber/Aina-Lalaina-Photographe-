@@ -342,4 +342,91 @@ footer {
     .hero h2 {
         font-size: 34px;
     }
+   /* =========================
+   BARRE DE RECHERCHE
+========================= */
+
+.search-section {
+    padding: 0;
+    margin: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-container input {
+    width: 240px;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #dddddd;
+    border-radius: 22px;
+    outline: none;
+    font-size: 14px;
+    background: #f7f7f7;
+    transition: 0.2s ease;
+}
+
+.search-container input:focus {
+    background: #ffffff;
+    border-color: #999999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.search-container button {
+    height: 40px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 22px;
+    background: #222222;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.search-container button:hover {
+    transform: translateY(-1px);
+}
+
+.search-container button:active {
+    transform: scale(0.94);
+}
+
+#searchResults {
+    display: none;
+}
+
+
+/* =========================
+   RECHERCHE SUR TÉLÉPHONE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .search-section {
+        order: 3;
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-container input {
+        flex: 1;
+        width: auto;
+    }
+
+    .search-container button {
+        padding: 0 15px;
+    }
+}
   }

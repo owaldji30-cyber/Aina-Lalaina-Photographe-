@@ -343,3 +343,86 @@ footer {
         font-size: 34px;
     }
    }
+/* =========================
+   ÉVÉNEMENTS
+========================= */
+
+#events-section {
+    padding: 70px 6%;
+    text-align: center;
+    background: #ffffff;
+}
+
+#events-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.events-description {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+#events-list {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-card h3 {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+.event-card button {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 25px;
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.event-card button:hover {
+    transform: translateY(-2px);
+}
+
+.event-card button:active {
+    transform: scale(0.94);
+}
+
+
+/* Téléphone */
+
+@media (max-width: 700px) {
+
+    #events-section {
+        padding: 50px 18px;
+    }
+
+    #events-section h2 {
+        font-size: 28px;
+    }
+
+    #events-list {
+        grid-template-columns: 1fr;
+    }
+   }

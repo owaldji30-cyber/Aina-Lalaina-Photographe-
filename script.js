@@ -5,7 +5,41 @@
 const API_URL =
     "https://script.google.com/macros/s/AKfycby7dzpwv_EOrk8Ip9m3JoV1c1aL1LMg9DzU-pFnjPS6RtWVTIlAuY3rOV-_I-o5wGU/exec";
 
+// Charger automatiquement les événements
+document.addEventListener("DOMContentLoaded", () => {
+    chargerEvenements();
+});
 
+async function chargerEvenements() {
+
+    try {
+
+        const response = await fetch(API_URL);
+
+        if (!response.ok) {
+            throw new Error("Erreur API");
+        }
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error("Erreur dans les données");
+        }
+
+        afficherEvenements(data.events);
+
+    } catch (error) {
+
+        console.error(error);
+
+        const liste = document.getElementById("events-list");
+
+        if (liste) {
+            liste.innerHTML =
+                "<p>Impossible de charger les événements.</p>";
+        }
+    }
+}
 // =========================
 // VOIR LES ÉVÉNEMENTS
 // =========================

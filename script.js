@@ -104,10 +104,18 @@ function afficherEvenements(events) {
         card.className = "event-card";
 
         card.innerHTML = `
-            <h3>${event.name}</h3>
-            <button onclick="ouvrirEvenement('${event.id}')">
-                Voir les photos
-            </button>
+    ${
+        event.cover
+        ? `<img src="${event.cover.url}" alt="${event.name}" class="event-cover">`
+        : `<div class="event-cover-placeholder">Aucune photo</div>`
+    }
+
+    <h3>${event.name}</h3>
+
+    <button onclick="ouvrirEvenement('${event.id}')">
+        Voir les photos
+    </button>
+`;
         `;
 
         eventsList.appendChild(card);

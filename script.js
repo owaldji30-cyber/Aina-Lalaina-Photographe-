@@ -2,7 +2,7 @@
 // CONFIGURATION API
 // =========================
 
-const API_URL =
+const API_URL =const API_URL =
     "https://script.google.com/macros/s/AKfycbwmn15NAR7v8w-6Ikpxy1HpeK4adxROxSx3N41WJZOG0V4xlkAni5R7Xi0qvp-hXNWz/exec";
 
 // Charger automatiquement les événements
@@ -24,6 +24,7 @@ async function chargerEvenements() {
 
         if (!data.success) {
             throw new Error("Erreur dans les données");
+            
         }
 
         afficherEvenements(data.events);
